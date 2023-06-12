@@ -21,7 +21,7 @@ class DataPipeline:
 
         Methods:
             __init__: Initializes the DataPipeline object.
-            download_csv_data: Downloads data from a given URL and returns it as a string.
+            download_csv_data: Downloads data from a given URL .
             convert_to_dataframe: Converts raw data into a pandas DataFrame.
             save_raw_text: Saves raw data to a file.
             save_data_to_csv: Saves a DataFrame to a CSV file.
@@ -33,13 +33,13 @@ class DataPipeline:
 
     def download_csv_data(self, data_url=''):
         """
-        Downloads data from the given URL and returns it as a string.
+        Downloads data from the given URL .
 
         Args:
             data_url (str): The URL of the CSV file.
 
         Returns:
-            str: The content of the CSV file.
+            The content of the CSV file.
         """
         response = requests.get(data_url)
         return response.content.decode('utf-8')
@@ -138,18 +138,16 @@ if __name__ == '__main__':
 
     # Description of the transformed data
     """
-    The transformed_data DataFrame represents the transformed version of the school_data.
+    The transformed_data DataFrame represents the transformed version of the data.
     It contains the results of the data transformation process, which may include cleaning,
-    reformatting, or aggregating the original data to meet specific requirements. The transformed_data
-    DataFrame can be used for further analysis or as the basis for generating reports or visualizations.
+    reformatting, or aggregating the original data to meet specific requirements.
     """
 
     # Description of the filter_data
     """
     The filter_data DataFrame represents a subset of the transformed_data based on certain conditions or filters.
     It contains a filtered view of the transformed data, including only the rows or columns that satisfy specific
-    criteria. The filter_data DataFrame can be used to focus on a particular subset of the transformed data for
-    in-depth analysis or reporting.
+    criteria.
     """
 
     # Save the transformed data and filter_data to CSV files
